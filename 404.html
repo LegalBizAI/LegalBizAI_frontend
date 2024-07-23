@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta http-equiv="refresh" content="0; URL='/%VITE_REPO_NAME%/'" /> -->
+    </head>
+    <body>
+        <script>
+            // This script redirects all 404 requests to the main index.html
+            const currentPath = window.location.pathname;
+            const lastPos = currentPath.lastIndexOf('/');
+            const upperPath = currentPath.substring(0, lastPos + 1);
+
+            window.location.replace(upperPath);
+        </script>
+    </body>
+</html>
