@@ -6,9 +6,15 @@ import App from './App';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/LegalbizAi_chatbot">
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <BrowserRouter
+            basename={
+                import.meta.env.VITE_REPO_NAME
+                    ? `/${import.meta.env.VITE_REPO_NAME}/`
+                    : '/'
+            }
+        >
+            <App />
+        </BrowserRouter>
+    </React.StrictMode>
 );

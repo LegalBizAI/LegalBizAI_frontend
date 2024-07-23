@@ -1,9 +1,12 @@
+// https://vitejs.dev/config/
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import 'dotenv/config';
 
-// https://vitejs.dev/config/
+console.log(process.env.VITE_REPO_NAME);
+
 export default defineConfig({
-    base: '/LegalBizAI_frontend/', // Đảm bảo rằng base path này đúng
+    base: process.env.VITE_REPO_NAME ? `/${process.env.VITE_REPO_NAME}/` : '/', // Đảm bảo rằng base path này đúng
     plugins: [react()],
     resolve: {
         alias: {

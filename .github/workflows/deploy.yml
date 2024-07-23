@@ -21,6 +21,9 @@ jobs:
             - name: Install dependencies
               run: npm install
 
+            - name: Set repository name
+              run: node setGHRepoName.js
+
             - name: Build project
               run: npm run build
 

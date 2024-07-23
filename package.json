@@ -6,7 +6,7 @@
     "homepage": "https://legalbizai.github.io/LegalBizAI_frontend/",
     "scripts": {
         "dev": "vite --host",
-        "build": "vite build && cp 404.html dist/404.html",
+        "build": "node setGHRepoName.js && vite build && cp 404.html dist/404.html",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -18,6 +18,8 @@
         "@fortawesome/react-fontawesome": "^0.2.0",
         "axios": "^1.7.2",
         "daisyui": "^2.50.0",
+        "dotenv": "^16.4.5",
+        "dotenv-expand": "^11.0.6",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-markdown": "^9.0.1",
